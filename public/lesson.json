@@ -1,0 +1,72 @@
+[
+  {
+    "lesson_name": "Basics of German Vocabulary",
+    "lesson_no": 1,
+    "description": "Learn essential German vocabulary for everyday use.",
+    "duration_time": "30 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Common Verbs and Actions",
+    "lesson_no": 2,
+    "description": "Master frequently used verbs in German.",
+    "duration_time": "35 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Describing the World",
+    "lesson_no": 3,
+    "description": "Adjectives to describe people, places, and things.",
+    "duration_time": "25 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Talking About Time",
+    "lesson_no": 4,
+    "description": "Vocabulary related to time, days, and schedules.",
+    "duration_time": "40 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Food and Drinks",
+    "lesson_no": 5,
+    "description": "Learn words to talk about meals, snacks, and beverages.",
+    "duration_time": "45 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Travel and Transportation",
+    "lesson_no": 6,
+    "description": "Essential vocabulary for getting around.",
+    "duration_time": "35 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Shopping and Spending",
+    "lesson_no": 7,
+    "description": "Words to help you shop and understand prices.",
+    "duration_time": "30 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Health and Well-being",
+    "lesson_no": 8,
+    "description": "Discussing health, symptoms, and visiting a doctor.",
+    "duration_time": "50 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Work and Education",
+    "lesson_no": 9,
+    "description": "Vocabulary for workplaces and educational settings.",
+    "duration_time": "40 minutes",
+    "total_words": 30
+  },
+  {
+    "lesson_name": "Advanced Topics",
+    "lesson_no": 10,
+    "description": "Challenging words for advanced learners.",
+    "duration_time": "60 minutes",
+    "total_words": 30
+  }
+]

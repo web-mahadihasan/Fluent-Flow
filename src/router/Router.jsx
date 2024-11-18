@@ -10,6 +10,7 @@ import ForgotPassword from "../components/ForgotPassword";
 import TutorialsPage from "../pages/TutorialsPage";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound";
+import Dashboard from "../pages/Dashboard";
 
 
 const Router = createBrowserRouter([
@@ -58,6 +59,10 @@ const Router = createBrowserRouter([
             path: "/tutorials",
             element: <TutorialsPage/>,
             loader: () => fetch("/videos.json")
+        },
+        {
+            path: "/dashboard",
+            element: <Dashboard/>
         },
       ]
     },

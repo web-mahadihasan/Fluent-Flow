@@ -12,7 +12,7 @@ module.exports = withMT({
     extend: {
       backgroundImage: {
         authbg: "url('./assets/loginBg.png')",
-        loginBg: "url('https://Tailwindmix.b-cdn.net/carousel/carousel-image-01.jpg')",
+        bannerBlue: "url('https://i.ibb.co.com/Hpmpc94/bannerbg-blue.png')",
         loginBg1: "url('https://Tailwindmix.b-cdn.net/carousel/carousel-image-03.jpg')",
         loginBg2: "url('https://Tailwindmix.b-cdn.net/carousel/carousel-image-04.jpg')",
       },

@@ -21,7 +21,8 @@ const Router = createBrowserRouter([
       children: [
         {
             path: "/",
-            element: <Home/>
+            element: <Home/>,
+            loader: () => fetch("/review.json")
         },
         {
             path: "/auth",

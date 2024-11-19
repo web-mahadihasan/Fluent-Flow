@@ -1,0 +1,143 @@
+[
+    {
+      "name": "Sophia Müller",
+      "profession": "Teacher",
+      "imgURL": "https://randomuser.me/api/portraits/women/1.jpg",
+      "review": "The structured lessons and tutorials make learning German vocabulary so easy!",
+      "rating": "4.8"
+    },
+    {
+      "name": "Liam Becker",
+      "profession": "Software Engineer",
+      "imgURL": "https://randomuser.me/api/portraits/men/1.jpg",
+      "review": "The pronunciation guides and examples are incredibly helpful.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Emma Schmidt",
+      "profession": "Graphic Designer",
+      "imgURL": "https://randomuser.me/api/portraits/women/2.jpg",
+      "review": "A fantastic platform with well-organized lessons and engaging videos.",
+      "rating": "4.9"
+    },
+    {
+      "name": "Noah Weber",
+      "profession": "Freelancer",
+      "imgURL": "https://randomuser.me/api/portraits/men/2.jpg",
+      "review": "Learning vocabulary has never been this enjoyable and effective.",
+      "rating": "4.6"
+    },
+    {
+      "name": "Isabella Fischer",
+      "profession": "Marketing Specialist",
+      "imgURL": "https://randomuser.me/api/portraits/women/3.jpg",
+      "review": "The step-by-step lessons have improved my German vocabulary significantly.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Mia Wagner",
+      "profession": "Student",
+      "imgURL": "https://randomuser.me/api/portraits/women/4.jpg",
+      "review": "The tutorials and interactive approach make learning German so much fun.",
+      "rating": "4.8"
+    },
+    {
+      "name": "Lucas Mayer",
+      "profession": "Business Analyst",
+      "imgURL": "https://randomuser.me/api/portraits/men/3.jpg",
+      "review": "This website is an excellent resource for mastering German vocabulary.",
+      "rating": "4.9"
+    },
+    {
+      "name": "Charlotte Lehmann",
+      "profession": "Translator",
+      "imgURL": "https://randomuser.me/api/portraits/women/5.jpg",
+      "review": "I love the clear explanations and practical examples provided in each lesson.",
+      "rating": "4.8"
+    },
+    {
+      "name": "Elias Braun",
+      "profession": "Entrepreneur",
+      "imgURL": "https://randomuser.me/api/portraits/men/4.jpg",
+      "review": "A game-changer for anyone looking to learn German vocabulary effectively.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Hannah Keller",
+      "profession": "Content Creator",
+      "imgURL": "https://randomuser.me/api/portraits/women/6.jpg",
+      "review": "The video tutorials are so engaging and easy to follow!",
+      "rating": "4.8"
+    },
+    {
+      "name": "Benjamin Hofmann",
+      "profession": "Data Scientist",
+      "imgURL": "https://randomuser.me/api/portraits/men/5.jpg",
+      "review": "I’ve learned so much in just a few weeks thanks to this platform.",
+      "rating": "4.9"
+    },
+    {
+      "name": "Emily Krüger",
+      "profession": "Nurse",
+      "imgURL": "https://randomuser.me/api/portraits/women/7.jpg",
+      "review": "The vocabulary lessons are well-structured and very effective.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Henry Schneider",
+      "profession": "Architect",
+      "imgURL": "https://randomuser.me/api/portraits/men/6.jpg",
+      "review": "A highly recommended platform for learning German vocabulary.",
+      "rating": "4.6"
+    },
+    {
+      "name": "Sophia Bergmann",
+      "profession": "HR Manager",
+      "imgURL": "https://randomuser.me/api/portraits/women/8.jpg",
+      "review": "The pronunciation guides have helped me speak German more confidently.",
+      "rating": "4.8"
+    },
+    {
+      "name": "Maximilian Vogel",
+      "profession": "Photographer",
+      "imgURL": "https://randomuser.me/api/portraits/men/7.jpg",
+      "review": "The interactive lessons make learning German vocabulary enjoyable.",
+      "rating": "4.9"
+    },
+    {
+      "name": "Amelia Frank",
+      "profession": "Researcher",
+      "imgURL": "https://randomuser.me/api/portraits/women/9.jpg",
+      "review": "An excellent tool for building a strong vocabulary base in German.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Julian Seidel",
+      "profession": "Doctor",
+      "imgURL": "https://randomuser.me/api/portraits/men/8.jpg",
+      "review": "This website has transformed the way I learn German vocabulary.",
+      "rating": "4.9"
+    },
+    {
+      "name": "Lena Peters",
+      "profession": "Tour Guide",
+      "imgURL": "https://randomuser.me/api/portraits/women/10.jpg",
+      "review": "I love how the lessons break down complex words into simple explanations.",
+      "rating": "4.8"
+    },
+    {
+      "name": "Finn Zimmer",
+      "profession": "Engineer",
+      "imgURL": "https://randomuser.me/api/portraits/men/9.jpg",
+      "review": "The real-world examples make it easier to remember the vocabulary.",
+      "rating": "4.7"
+    },
+    {
+      "name": "Clara Wolf",
+      "profession": "Librarian",
+      "imgURL": "https://randomuser.me/api/portraits/women/11.jpg",
+      "review": "A user-friendly platform that makes learning German vocabulary simple and fun.",
+      "rating": "4.8"
+    }
+  ]
+  

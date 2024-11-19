@@ -13,8 +13,7 @@ module.exports = withMT({
       backgroundImage: {
         authbg: "url('./assets/loginBg.png')",
         bannerBlue: "url('https://i.ibb.co.com/Hpmpc94/bannerbg-blue.png')",
-        loginBg1: "url('https://Tailwindmix.b-cdn.net/carousel/carousel-image-03.jpg')",
-        loginBg2: "url('https://Tailwindmix.b-cdn.net/carousel/carousel-image-04.jpg')",
+        bgShadow: "url('./assets/bgShadow.svg')",
       },
       fontFamily: {
         popins: ["Poppins", "sans-serif"],

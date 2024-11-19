@@ -7,7 +7,8 @@ import SectionTitle from "../components/SectionTitle";
 import ReadArticles from "../components/ReadArticles";
 
 const Home = () => {
-  const reviewData = useLoaderData()
+  const {reviewData, articleData} = useLoaderData()
+
   return (
     <div className="min-h-screen">
       <MainBanner/>
@@ -29,7 +30,7 @@ const Home = () => {
 
       {/* Article section  */}
       <div className="container mx-auto px-4 xl:px-0">
-        <ReadArticles/>
+        <ReadArticles articleData={articleData}/>
       </div>
 
     </div>

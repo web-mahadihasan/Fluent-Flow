@@ -1,7 +1,7 @@
 import { Button, Checkbox, Input } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
@@ -11,7 +11,9 @@ import toast from "react-hot-toast";
 const Login = () => {
   const [seePassword, setSeePassword] = useState(false)
   const [showError, setShowError] = useState({})
-  
+  const location = useLocation()
+  const navigate = useNavigate()
+
   const {loginUser, loginWithGoogle} = useContext(AuthProviderContext)
 
   const handleLogin = (e) => {
@@ -22,8 +24,8 @@ const Login = () => {
 
     loginUser(email, password)
     .then((result) => {
-      console.log(result.user)
       toast.success("Successfull login")
+      navigate(location?.state ? location.state : "/")
     }).catch((error) => {
       console.log(error)
       if(error = "auth/invalid-credential"){
@@ -35,8 +37,8 @@ const Login = () => {
   const handleGoogleLogin = () => {
     loginWithGoogle()
     .then((result) => {
-      console.log(result.user)
       toast.success("successfull login")
+      navigate(location?.state ? location.state : "/")
     }).catch((error) => {
       toast.error("Failed to log in.")
     })

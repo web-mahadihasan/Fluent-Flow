@@ -22,7 +22,15 @@ const Router = createBrowserRouter([
         {
             path: "/",
             element: <Home/>,
-            loader: () => fetch("/review.json")
+            loader: async () => {
+                const reviewRes = await fetch("/review.json");
+                const reviewData = await reviewRes.json()
+
+                const articleRes = await fetch("/articles.json")
+                const articleData = await articleRes.json()
+                
+                return {reviewData, articleData}
+            }
         },
         {
             path: "/auth",
@@ -49,16 +57,24 @@ const Router = createBrowserRouter([
         {
             path: "/start-learning",
             element: <StartLearning/>,
-            loader: () => fetch("/lesson.json")
+            loader: async() => {
+                const lessonRes = await fetch("/lesson.json");
+                const lessonData = await lessonRes.json()
+
+                const videoRes = await fetch("/videos.json")
+                const videoData = await videoRes.json()
+                
+                return {lessonData, videoData}
+            }
         },
         {
             path: "/start-learning/:lessonId",
             element: <PrivateRoute><LessonDetails/></PrivateRoute>,
-            loader: () => fetch("/germanVocabulary.json")
+            loader: () => fetch("/UpdatedVocabularyList.json")
         },
         {
             path: "/tutorials",
-            element: <TutorialsPage/>,
+            element: <PrivateRoute><TutorialsPage/></PrivateRoute>,
             loader: () => fetch("/videos.json")
         },
         {

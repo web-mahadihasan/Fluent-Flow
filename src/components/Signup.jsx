@@ -1,7 +1,7 @@
 import { Button, Checkbox, Input } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
@@ -11,6 +11,8 @@ const Signup = () => {
     const [seePassword, setSeePassword] = useState(false)
     const [seeRepeatPassword, setSeeRepeatPassword] = useState(false)
     const [showError, setShowError] = useState({})
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const {createNewUser, loginWithGoogle} = useContext(AuthProviderContext)
 
@@ -37,7 +39,8 @@ const Signup = () => {
         
         createNewUser(email, password)
         .then((result) => {
-            console.log(result.user)
+            toast.success("Successfully Create your account")
+            navigate(location?.state ? location.state : "/")
         }).catch(error => {
             console.log(error)
         })
@@ -45,8 +48,8 @@ const Signup = () => {
     const handleGoogleLogin = () => {
         loginWithGoogle()
         .then((result) => {
-          console.log(result.user)
           toast.success("successfull login")
+          navigate(location?.state ? location.state : "/")
         }).catch((error) => {
           toast.error("Failed to log in.")
         })
@@ -110,7 +113,7 @@ const Signup = () => {
                 className="flex w-full items-center justify-center gap-2 text-sm font-semibold text-black/75"
             >
                 <FcGoogle size={20} />
-                Sign in with Google
+                Sign up with Google
             </Button>
     </div>
     );

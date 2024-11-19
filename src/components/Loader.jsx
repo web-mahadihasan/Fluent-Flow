@@ -7,7 +7,7 @@ const Loader = () => {
         <div className="absolute animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-[#a38ffd]"></div>
         <img
           src={logo}
-          class="rounded-full h-12 w-12"
+          className="rounded-full h-12 w-12"
         />
       </div>
     </div>

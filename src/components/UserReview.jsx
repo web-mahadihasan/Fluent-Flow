@@ -61,12 +61,3 @@ const UserReview = ({reviewData}) => {
 
 export default UserReview;
 
-
-
-// {
-//     "name": "Sophia Müller",
-//     "profession": "Teacher",
-//     "imgURL": "https://randomuser.me/api/portraits/women/1.jpg",
-//     "review": "The structured lessons and tutorials make learning German vocabulary so easy!",
-//     "rating": "4.8"
-//   },

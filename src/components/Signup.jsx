@@ -6,16 +6,31 @@ import { AuthProviderContext } from "../providers/AuthProvider";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { RiInformationOffLine } from "react-icons/ri";
 
 const Signup = () => {
     const [seePassword, setSeePassword] = useState(false)
     const [seeRepeatPassword, setSeeRepeatPassword] = useState(false)
     const [showError, setShowError] = useState({})
+    const [imageURL, setImageUrl] = useState("")
     const location = useLocation()
     const navigate = useNavigate()
 
-    const {createNewUser, loginWithGoogle} = useContext(AuthProviderContext)
+    const {createNewUser, loginWithGoogle, updateUserProfile, setUser} = useContext(AuthProviderContext)
 
+     // handle image upload 
+    const handleImageUpload = (e) => {
+        const imageLink = e.target.files[0]
+        const imageData = new FormData()
+        imageData.append("image", imageLink)
+        fetch("https://api.imgbb.com/1/upload?key=176775b308da684d8b761f7bdfe641cd", 
+        {
+            method: "POST",
+            body: imageData
+        })
+        .then(res => res.json())
+        .then(data => setImageUrl(data.data?.display_url))
+    }
     const handleSignup = (e) => {
         e.preventDefault()
         const passwordValidation = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/;
@@ -39,10 +54,18 @@ const Signup = () => {
         
         createNewUser(email, password)
         .then((result) => {
-            toast.success("Successfully Create your account")
-            navigate(location?.state ? location.state : "/")
+            setUser(result.user)
+            updateUserProfile({displayName: name, photoURL:imageURL})
+            .then((result) => {
+                toast.success("Successfully Create your account")
+                navigate("/")
+            }).catch(error => {
+                console.log(error)
+            })
         }).catch(error => {
-            console.log(error)
+            if(error = "auth/email-already-in-use"){
+                setShowError({...showError, existEmail: "Email already have an account"})
+            }
         })
     }
     const handleGoogleLogin = () => {
@@ -57,6 +80,9 @@ const Signup = () => {
     return (
         <div className="px-4 py-8 z-10">
             <h3 className="text-center my-10 uppercase text-2xl font-semibold">Create a new account</h3>
+            {
+                showError.existEmail && <p className="text-red-600 flex items-center gap-1 my-4"><RiInformationOffLine size={24} /> {showError.existEmail}</p>
+            }
             <form onSubmit={handleSignup} className="space-y-4">
                 {/* Name  */}
                 <div className="">
@@ -96,7 +122,7 @@ const Signup = () => {
                 </div>
                 {/* Image  */}
                 <div className="">
-                    <input  name="imgFile" type="file" className="file-input file-input-bordered file-input-md w-full" />
+                    <input onChange={handleImageUpload} name="imgFile" type="file" className="file-input file-input-bordered file-input-md w-full" />
                 </div>
                 {/* Checkbox  */}
                 <div className="flex items-center  gap-1">

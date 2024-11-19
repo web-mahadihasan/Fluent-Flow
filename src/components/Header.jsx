@@ -30,9 +30,9 @@ const Header = () => {
       <Link to={"/"} className="p-1 font-normal" > Home </Link>
       <Link to={"/start-learning"} className="p-1 font-normal" > Start Learning </Link>
       <Link to={"/tutorials"} className="p-1 font-normal" > Tutorials </Link>
-      <Link className="p-1 font-normal" > About Us </Link>
+      <Link to={"/about-us"} className="p-1 font-normal" > About Us </Link>
       {
-        user && <Link to={"/dashboard"} className="p-1 font-normal" > Dashboard </Link>
+        user && <Link to={"/my-profile"} className="p-1 font-normal" > My Profile </Link>
       }
     </ul>
   );

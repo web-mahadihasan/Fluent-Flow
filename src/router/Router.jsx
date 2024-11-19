@@ -10,7 +10,7 @@ import ForgotPassword from "../components/ForgotPassword";
 import TutorialsPage from "../pages/TutorialsPage";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound";
-import Dashboard from "../pages/Dashboard";
+import MyProfile from "../pages/MyProfile";
 
 
 const Router = createBrowserRouter([
@@ -78,8 +78,8 @@ const Router = createBrowserRouter([
             loader: () => fetch("/videos.json")
         },
         {
-            path: "/dashboard",
-            element: <Dashboard/>
+            path: "/my-profile",
+            element: <MyProfile/>
         },
       ]
     },

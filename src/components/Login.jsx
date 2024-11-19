@@ -14,8 +14,12 @@ const Login = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
-  const {loginUser, loginWithGoogle} = useContext(AuthProviderContext)
+  const {loginUser, loginWithGoogle, setUser, setForgotEmail} = useContext(AuthProviderContext)
 
+  const handleLoginEmail = (e) => {
+    const email = e.target.value
+    setForgotEmail(email)
+  }
   const handleLogin = (e) => {
     e.preventDefault()
     const form = new FormData(e.target)
@@ -25,6 +29,7 @@ const Login = () => {
     loginUser(email, password)
     .then((result) => {
       toast.success("Successfull login")
+      setUser(result.user)
       navigate(location?.state ? location.state : "/")
     }).catch((error) => {
       console.log(error)
@@ -43,16 +48,17 @@ const Login = () => {
       toast.error("Failed to log in.")
     })
   }
+
   return (
     <div className="px-4 py-8 z-10">
       <h3 className="text-center my-10 uppercase text-2xl font-semibold">Log in to you account</h3>
-      <form onSubmit={handleLogin} className="space-y-4">
         {
-          showError.invalid && <p className="text-red-600 flex items-center gap-1"><RiInformationOffLine size={24} /> {showError.invalid}</p>
+          showError.invalid && <p className="text-red-600 flex items-center gap-1 my-3"><RiInformationOffLine size={24} /> {showError.invalid}</p>
         }
+      <form onSubmit={handleLogin} className="space-y-4">
         {/* Email  */}
         <div className="">
-            <Input type="email" name="email" inputMode="email" required
+            <Input onChange={handleLoginEmail} type="email" name="email" inputMode="email" required
             label="Your Email"
             className="appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none shadow-lg bg-base-200 py-5" />
         </div>
@@ -68,7 +74,7 @@ const Login = () => {
         {/* Forgot password  */}
         <div className="flex items-center justify-between">
           <Checkbox label="Remember Me" />
-          <Link to={"/auth/forgot-password"} className="hover:text-blue-500 duration-300 text-base text-black/75">Forgot password?</Link>
+          <Link to={"/auth/forgot-password"} className="hover:text-blue-500 duration-300 text-base text-black/75 cursor-pointer">Forgot password?</Link>
         </div>
         {/* Login button  */}
         <Button fullWidth type="submit" className="text-sm font-semibold tracking-wider ">Log in</Button>

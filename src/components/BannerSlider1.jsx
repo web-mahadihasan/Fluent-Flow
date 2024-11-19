@@ -5,7 +5,7 @@ const BannerSlider1 = () => {
     const navigate = useNavigate()
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center">
-      <div className="pl-6 xl:pl-10 py-6">
+      <div data-aos="fade-right" className="pl-6 xl:pl-10 py-6">
         <h1 className="font-bold text-3xl lg:text-4xl leading-relaxed">
           Unlock Your Language Potential with
           <span className="text-[#a38ffd] uppercase inline-block mt-2 ml-3"> Fluent Flow</span>
@@ -18,7 +18,7 @@ const BannerSlider1 = () => {
         </p>
         <Button onClick={() => navigate("/start-learning")} variant="filled" className="bg-[#a38ffd] tracking-wider">Start Learning</Button>
       </div>
-      <div className="relative">
+      <div data-aos="fade-up-left" className="relative">
         <div className="bg-[#a38ffd]/40 rounded-full h-[380px] lg:h-[410px] w-[380px] left-3 lg:w-[410px] absolute -bottom-[85px] md:hidden lg:flex lg:left-7  xl:left-[18%] ring-2 ring-[#a38ffd]/50 ring-offset-8 z-20 shadow-2xl"></div>
         <img src="https://i.ibb.co.com/hRKMHJQ/banner3.png" alt="" className=" transform scale-x-[-1] mx-auto h-[480px] z-30 relative top-20 rounded-b-full" />
         <img src="https://i.ibb.co.com/vqLNKb0/Group.png" alt="" className="absolute lg:top-20 xl:top-20 top-32 xl:right-48 right-8 lg:right-24 z-0" />

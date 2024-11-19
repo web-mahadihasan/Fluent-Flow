@@ -13,6 +13,7 @@
     "@glidejs/glide": "^3.6.2",
     "@headlessui/react": "^2.2.0",
     "@material-tailwind/react": "^2.1.10",
+    "aos": "^2.3.4",
     "firebase": "^11.0.2",
     "flowbite-react": "^0.10.2",
     "react": "^18.3.1",

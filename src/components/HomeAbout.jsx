@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const HomeAbout = () => {
     return (
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 my-24 bg-white/90">
-            <div className="border bg-bgShadow bg-no-repeat bg-bottom shadow rounded-tl-[100px] rounded-br-[100px]">
+            <div data-aos="zoom-in-up" className="border bg-bgShadow bg-no-repeat bg-bottom shadow rounded-tl-[100px] rounded-br-[100px]">
                 <img src="https://i.ibb.co.com/Q60YFqt/banner2.png" alt="" className="h-[600px] mt-9 ml-6"/>
             </div>
-            <div className="p-6 xl:p-10">
+            <div data-aos="fade-up" className="p-6 xl:p-10">
                 <p className="text-[#9f89ff] py-1 px-4 bg-[#a38ffd]/15 w-fit rounded-full">About us</p>
                 <h3 className="text-3xl font-semibold my-4 leading-snug text-[#333]">Ready to help you learn German Vocabulary</h3>
                 <div>

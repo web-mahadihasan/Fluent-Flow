@@ -10,11 +10,11 @@ const TutorialsPage = () => {
     return (
         <div className="container mx-auto px-4 xl:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center my-8 p-6">
-                <div>
+                <div data-aos="fade-right">
                     <h3 className="text-3xl max-w-xl leading-relaxed font-bold">Our video Guides help you to learn <span className="text-[#a38ffd]">German alphabet</span></h3>
                     <p className="text-black/75 my-4">Learn the German alphabet with our video guides, featuring clear pronunciations and practical examples for easy understanding</p>
                 </div>
-                <img src="https://i.ibb.co.com/f2JFDBx/tutorialpng.png" alt="" className="h-[400px] mx-auto" />
+                <img data-aos="fade-left" src="https://i.ibb.co.com/f2JFDBx/tutorialpng.png" alt="" className="h-[400px] mx-auto" />
             </div>
 
             <div>

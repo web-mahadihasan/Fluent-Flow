@@ -17,7 +17,7 @@ const OurSuccess = () => {
       {/* Our success card  */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-6 rounded-md mb-24 bg-[#a38ffd]/55">
         {/* Card one  */}
-        <div className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
+        <div data-aos="fade-right" className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
             <div className="p-3 bg-[#a38ffd]/15 rounded-full w-fit">
                 <img src={user} alt="" className="w-14"/>
             </div>
@@ -25,7 +25,7 @@ const OurSuccess = () => {
             <h4 className="text-3xl font-bold my-3 text-black/75">{<CountUp end={3800} duration={5} />}+</h4>
         </div>
         {/* Card two  */}
-        <div className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
+        <div data-aos="zoom-in" className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
             <div className="p-3 bg-[#a38ffd]/15 rounded-full w-fit">
                 <img src={lesson} alt="" className="w-14"/>
             </div>
@@ -33,7 +33,7 @@ const OurSuccess = () => {
             <h4 className="text-3xl font-bold my-3 text-black/75">{<CountUp end={100} duration={8}/>}+</h4>
         </div>
         {/* Card three  */}
-        <div className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
+        <div data-aos="zoom-in" className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
             <div className="p-3 bg-[#a38ffd]/15 rounded-full w-fit">
                 <img src={tutorial} alt="" className="w-14"/>
             </div>
@@ -41,7 +41,7 @@ const OurSuccess = () => {
             <h4 className="text-3xl font-bold my-3 text-black/75">{<CountUp end={26} duration={8}/>}+</h4>
         </div>
         {/* Card four  */}
-        <div className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
+        <div data-aos="fade-left" className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
             <div className="p-3 bg-[#a38ffd]/15 rounded-full w-fit">
                 <img src={word} alt="" className="w-14"/>
             </div>

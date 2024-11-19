@@ -23,7 +23,7 @@ const ReadArticles = ({articleData}) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    articles?.map(article => <div key={article.id} className="flex flex-col border p-4 shadow rounded-md">
+                    articles?.map(article => <div key={article.id} className="flex flex-col border p-4 shadow rounded-md" data-aos="zoom-in">
                         <img src={article?.image} alt={article.title} className="h-[220px] w-full"/>
                         <h3 className="my-4 text-xl font-bold text-black/75">{article?.title}</h3>
                         <p className="text-black/60 line-clamp-3 flex-1">{article?.description}</p>

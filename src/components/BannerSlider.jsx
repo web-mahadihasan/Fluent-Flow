@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const BannerSlider = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full items-center justify-between">
-            <div className="pl-6 xl:pl-10 py-6">
+            <div data-aos="fade-up" className="pl-6 xl:pl-10 py-6">
                 <h1 className="font-bold text-3xl lg:text-4xl leading-relaxed">
                     Unlock Your Language Potential with
                     <span className="text-[#a38ffd] uppercase inline-block mt-2 ml-3"> Fluent Flow</span>
@@ -18,7 +18,7 @@ const BannerSlider = () => {
                 </p>
                 <Button onClick={() => navigate("/start-learning")} variant="filled" className="bg-[#a38ffd] tracking-wider">Start Learning</Button>
             </div>
-            <div className="relative flex bg-bannerBlue h-full bg-no-repeat bg-bottom md:bg-center">
+            <div data-aos="zoom-in" className="relative flex bg-bannerBlue h-full bg-no-repeat bg-bottom md:bg-center">
                 <img src="https://i.ibb.co.com/J7bMrCT/banner.png" alt="" className="h-[430px] w-[340px] mt-[68px] mx-auto" />
                 <img src="https://i.ibb.co.com/Bg7v1BG/bannerbg-com.png" alt="" className="h-[145px] w-[185px] absolute -right-2 top-0 xl:right-16 xl:top-10" />
                 <img src="https://i.ibb.co.com/nqpWjkD/groupimg.png" alt="" className="w-[186px] h-[124px] absolute top-48 lg:top-28 left-0 md:-left-12 xl:left-2"/>

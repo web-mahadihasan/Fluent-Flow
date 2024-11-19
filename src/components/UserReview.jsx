@@ -15,7 +15,7 @@ import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 const UserReview = ({reviewData}) => {
     return (
         <>
-          <div className='bg-[#a38ffd]/50 rounded-md mb-24'>
+          <div data-aos="fade-up" data-aos-duration="500" className='bg-[#a38ffd]/50 rounded-md mb-24'>
 
           <Swiper
             effect={'coverflow'}

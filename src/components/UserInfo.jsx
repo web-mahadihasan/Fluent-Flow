@@ -45,16 +45,16 @@ const UserInfo = () =>  {
               {/* More details  */}
             <div className="min-w-60 space-y-1">
                 <div className="flex flex-col px-6 py-2 font-medium text-base text-gray-700 gap-2 capitalize transition-colors duration-300 transform  hover:bg-gray-100">
-                  <span className="text-lg font-medium text-black/80">Mehedi Hasan</span>
-                  <span className="lowercase">Contact@gmail.com</span>
+                  <span className="text-lg font-medium text-black/80">{user?.displayName}</span>
+                  <span className="lowercase">{user?.email}</span>
                 </div>
-                <Link to={'/'} className="flex items-center px-6 py-2 font-medium text-base text-gray-700 gap-2 capitalize transition-colors duration-300 transform  hover:bg-gray-100">
+                <Link to={'/my-profile'} className="flex items-center px-6 py-2 font-medium text-base text-gray-700 gap-2 capitalize transition-colors duration-300 transform  hover:bg-gray-100">
                     <LuUser2 size={20}/>
                     <span className="mx-1">
                        <span>My Profile</span>
                     </span>
                 </Link>
-                <Link to={'/'} className="flex items-center px-6 py-2 font-medium text-base text-gray-700 gap-2 capitalize transition-colors duration-300 transform  hover:bg-gray-100">
+                <Link to={'/my-profile/update-profile'} className="flex items-center px-6 py-2 font-medium text-base text-gray-700 gap-2 capitalize transition-colors duration-300 transform  hover:bg-gray-100">
                     <IoSettingsOutline size={20}/>
                     <span className="mx-1">
                     Update Profile

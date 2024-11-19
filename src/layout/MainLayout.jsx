@@ -1,10 +1,19 @@
 import { Outlet } from "react-router-dom";
 import FooterSection from "../components/FooterSection";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
 import { Toaster } from "react-hot-toast";
+import { React, useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MainLayout = () => {
+    useEffect(() => {
+        AOS.init({
+             duration: 800,
+             once: false,
+           })
+     }, [])
+
     return (
         <>
         <Toaster/>

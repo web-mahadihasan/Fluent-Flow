@@ -23,7 +23,7 @@ const LessonDetails = () => {
     }
     return (
         <div className="container mx-auto px-4 xl:px-0 mb-24">
-            <h4 className="my-10 text-2xl font-bold flex items-center gap-2 pl-4">
+            <h4 data-aos="fade-up" className="my-10 text-2xl font-bold flex items-center gap-2 pl-4">
                 <span><img src="https://i.ibb.co.com/Jq6m862/bookmark.gif" alt="" className="w-14"/></span>
                 <span>Start Lesson - {lessonId}</span>
             </h4>

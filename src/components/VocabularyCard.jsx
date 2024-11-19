@@ -21,7 +21,7 @@ const VocabularyCard = ({vocabulary = {}, handleWhenToSay}) => {
         window.speechSynthesis.speak(utterance);
     }
     return (
-        <div onClick={()=> speakWord(word)} className={`border p-4 rounded-lg shadow-lg flex flex-col cursor-pointer ${cardColor}`}>
+        <div data-aos="fade-up" data-aos-duration="1000" onClick={()=> speakWord(word)} className={`border p-4 rounded-lg shadow-lg flex flex-col cursor-pointer ${cardColor}`}>
             <h4 className="text-lg font-medium p-2 rounded bg-[#a38ffd]/20">Word: {word}</h4>
             <div className="divider my-1"></div>
             <div className="ml-4 space-y-1 text-black/75 my-2 flex-1">

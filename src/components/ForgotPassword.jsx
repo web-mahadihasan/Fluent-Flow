@@ -28,9 +28,9 @@ const ForgotPassword = () => {
         }
     }
     return (
-        <div className="px-4 py-8 z-10">
+        <div data-aos="zoom-in-up" className="px-4 py-8 z-10">
             <div>
-            <h3 className="text-center my-10 uppercase text-2xl font-semibold">Reset your passowrd</h3>
+            <h3 className="text-center my-10 uppercase text-2xl font-bold text-black/65">Reset your passowrd</h3>
                 <form onSubmit={handleForgotPassword} className="space-y-5">
                 <div>
                     <Input onChange={handleForgotEmail} name="email" type="email" value={forgotEmail} inputMode="text"

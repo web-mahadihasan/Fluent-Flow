@@ -1,20 +1,28 @@
 import { Button } from "@material-tailwind/react";
-import { NavLink, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Authentication = () => {
+    const {pathname} = useLocation()
+    const [authText, setAuthText] = useState("")
+    
+    useEffect(() => {
+        if(pathname === "/auth/signup"){
+            setAuthText("Join Our Community and Start Your Journey!")
+        }else if(pathname === "/auth/login"){
+            setAuthText("Welcome back to our Community")
+        }else{
+            setAuthText("Forgot your password? No worries!")
+        }
+    }, [pathname])
     return (
-        <div className="container mx-auto px-4 xl:px-10 shadow-md border min-h-[700px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center my-10">
+        <div className="container mx-auto px-4 xl:px-10 shadow-md border min-h-[700px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center my-10 font-popins">
             <div className="lg:col-span-1 xl:col-span-2 bg-authbg bg-center bg-no-repeat bg-cover h-full flex flex-col items-start justify-center">
-                <h1>Welcome back to our
-                Community</h1>
-                <p>Start your language learning journey with us and join our community</p>
-                <Button ripple={true} className="mt-16 font-semibold text-sm">Explore our community </Button>
+                <h1 className="text-3xl font-bold text-black/80 my-8">{authText}</h1>
+                <p className="max-w-2xl text-lg text-black/65">Start your German language learning journey with us today and become part of a vibrant, supportive community.</p>
+                <Link to={"/start-learning"}><Button ripple={true} className="mt-10 font-semibold text-sm">Explore our community </Button></Link>
             </div>
             <div className="">
-                {/* <div className="my-5 py-3 px-2 bg-black/15 w-fit mx-auto rounded-full">
-                    <NavLink to={"/auth/login"} className={`py-2 px-4 bg-black/40 rounded-full mr-4`}>LOGIN</NavLink>
-                    <NavLink to={"/auth/signup"}>SIGNUP</NavLink>
-                </div> */}
                 <Outlet/>
             </div>
         </div>

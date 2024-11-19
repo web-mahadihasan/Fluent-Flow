@@ -5,8 +5,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import UserInfo from "./UserInfo";
 import textLogo from "../assets/logo-text.png"
 import logo from "../assets/logo-only.png"
@@ -27,12 +26,12 @@ const Header = () => {
  
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Link to={"/"} className="p-1 font-normal" > Home </Link>
-      <Link to={"/start-learning"} className="p-1 font-normal" > Start Learning </Link>
-      <Link to={"/tutorials"} className="p-1 font-normal" > Tutorials </Link>
-      <Link to={"/about-us"} className="p-1 font-normal" > About Us </Link>
+      <NavLink to={"/"} className="p-1 font-normal" > Home </NavLink>
+      <NavLink to={"/start-learning"} className="p-1 font-normal" > Start Learning </NavLink>
+      <NavLink to={"/tutorials"} className="p-1 font-normal" > Tutorials </NavLink>
+      <NavLink to={"/about-us"} className="p-1 font-normal" > About Us </NavLink>
       {
-        user && <Link to={"/my-profile"} className="p-1 font-normal" > My Profile </Link>
+        user && <NavLink to={"/my-profile"} className="p-1 font-normal" > My Profile </NavLink>
       }
     </ul>
   );
@@ -53,13 +52,13 @@ const Header = () => {
                 user? 
                 <UserInfo/> : 
                 (<div className="items-center gap-x-1 hidden md:flex">
-                  <Link to={"/auth/signup"} className="border lg:hidden xl:flex border-gray-200 rounded-lg mr-4">
+                  <Link to={"/auth/signup"} className="border lg:hidden xl:flex py-1 border-[#a38ffd] rounded-lg mr-4">
                     <Button variant="text" size="sm" color="blue-gray">
                       Sign up
                     </Button>
                   </Link>
                   <Link to={"/auth/login"}>
-                    <Button variant="gradient" size="sm"> Log in </Button>
+                    <Button variant="filled" size="sm" className="bg-[#a38ffd] px-8 py-3 text-white"> Log in </Button>
                   </Link>
                 </div>)
               }
@@ -83,10 +82,10 @@ const Header = () => {
         <div className={`px-6 md:px-12 mt-6 ${openNav ? "block duration-500 text-black": "hidden duration-500"}`} >
             {navList}
             {user? "" :(<div className="flex items-center gap-x-1 md:hidden">
-              <Link to={"/auth/signup"} className="px-8 font-medium mr-3 py-1 border border-gray-200 rounded-lg hover:bg-black/5 focus:bg-black/5">
+              <Link to={"/auth/signup"} className="px-8 font-medium mr-3 py-2 border border-[#a38ffd] text-[#9077fd] rounded-lg hover:bg-black/5 focus:bg-black/5">
                 <span>Sign up</span>
               </Link>
-              <Link to={"/auth/login"} className="px-8 py-1 border border-black bg-black text-white font-medium rounded-lg">
+              <Link to={"/auth/login"} className="px-8 py-2 border border-[#a38ffd] bg-[#a38ffd] text-white font-medium rounded-lg">
                 <span>Log in</span>
               </Link>
             </div>)}

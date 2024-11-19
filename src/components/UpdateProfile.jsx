@@ -14,13 +14,17 @@ const UpdateProfile = () => {
         const form = new FormData(e.target)
         const name = form.get("name")
         const image = form.get("image")
-        updateUserProfile({displayName: name, photoURL:image})
-        .then((result) => {
-            toast.success("Successfully Update you information")
-            navigate("/my-profile")
-        }).catch(error => {
-            console.log(error)
-        })
+        if(name.length > 0 || image > 0){
+            updateUserProfile({displayName: name, photoURL:image})
+            .then((result) => {
+                toast.success("Successfully Update you information")
+                navigate("/my-profile")
+            }).catch(error => {
+                console.log(error)
+            })
+        }else {
+            toast.error("Can't update profile with empty value. Enter correct information")
+        }
     }
     return (
         <div className="max-w-5xl mx-auto px-4 flex items-center justify-center min-h-[700px]">

@@ -78,8 +78,8 @@ const Signup = () => {
         })
       }
     return (
-        <div className="px-4 py-8 z-10">
-            <h3 className="text-center my-10 uppercase text-2xl font-semibold">Create a new account</h3>
+        <div data-aos="fade-left" className="px-4 py-8 z-10">
+            <h3 className="text-center my-10 uppercase text-2xl font-bold text-black/65">Create a new account</h3>
             {
                 showError.existEmail && <p className="text-red-600 flex items-center gap-1 my-4"><RiInformationOffLine size={24} /> {showError.existEmail}</p>
             }
@@ -130,13 +130,13 @@ const Signup = () => {
                     <label htmlFor="" className="text-sm">I agree with the <a href="" className=" text-blue-500">terms & conditions.</a> </label>
                 </div>
                 {/* Submit  */}
-                <Button fullWidth type="submit" className="text-sm font-semibold tracking-wider ">Sign up</Button>
+                <Button fullWidth type="submit" className="text-sm font-semibold tracking-wider bg-[#a38ffd]">Sign up</Button>
             </form>
             <p className=" text-black/60 my-5 text-center text-base">Already have an account? <Link to={"/auth/login"} className="underline text-blue-500 hover:text-black/70 duration-300">Log in here</Link></p>
             <div className="divider text-sm text-black/75">Or Connect with</div>
             <Button onClick={handleGoogleLogin}
                 variant="outlined"
-                className="flex w-full items-center justify-center gap-2 text-sm font-semibold text-black/75"
+                className="flex w-full items-center justify-center gap-2 text-sm font-semibold text-black/75 border-gray-400"
             >
                 <FcGoogle size={20} />
                 Sign up with Google

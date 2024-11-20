@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound";
 import MyProfile from "../pages/MyProfile";
 import UpdateProfile from "../components/UpdateProfile";
+import AboutUs from "../pages/AboutUs";
 
 
 const Router = createBrowserRouter([
@@ -81,6 +82,10 @@ const Router = createBrowserRouter([
         {
             path: "/my-profile/update-profile",
             element: <PrivateRoute><UpdateProfile/></PrivateRoute>,
+        },
+        {
+            path: "/about-us",
+            element: <AboutUs/>,
         },
       ]
     },

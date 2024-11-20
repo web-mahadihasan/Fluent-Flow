@@ -14,6 +14,7 @@ module.exports = withMT({
         authbg: "url('./assets/loginBg.png')",
         bannerBlue: "url('https://i.ibb.co.com/Hpmpc94/bannerbg-blue.png')",
         bgShadow: "url('./assets/bgShadow.svg')",
+        aboutBg: "url('./assets/bgAbout.svg')",
       },
       fontFamily: {
         popins: ["Poppins", "sans-serif"],

@@ -3,6 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import Tutorials from "../components/Tutorials";
+import { Helmet } from "react-helmet-async";
 
 const StartLearning = () => {
 
@@ -11,6 +12,9 @@ const StartLearning = () => {
 
   return (
     <div className="container mx-auto px-4 xl:px-0 relative">
+      <Helmet>
+          <title>Fluent Flow | Start Learning</title>
+      </Helmet>
       {/* start learn banner  */}
       <div className="grid grid-cols-1 md:grid-cols-2 h-[400px] my-10">
         <div data-aos="fade-right" className="flex flex-col justify-center">

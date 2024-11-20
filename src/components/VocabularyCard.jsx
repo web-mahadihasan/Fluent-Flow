@@ -37,22 +37,3 @@ const VocabularyCard = ({vocabulary = {}, handleWhenToSay}) => {
 
 export default VocabularyCard;
 
-
-// Show the vocabularies information  in a card format 
-// Word, meaning, pronunciation, part_of_speech
-// Color the cards based on the difficulties 
-// When to say the button 
-// When to say button open a modal with the following data
-// ( word, meaning,  when to say , example ) 
-
-
-// "id": "1",
-// "word": "lernen",
-// "pronunciation": "lehr-nen",
-// "meaning": "to learn",
-// "part_of_speech": "verb",
-// "difficulty": "easy",
-// "lesson_no": 1,
-// "when_to_say": "Use 'lernen' when referring to to learn.",
-// "example": "Das ist ein lernen. (This is a to learn)"
-// },

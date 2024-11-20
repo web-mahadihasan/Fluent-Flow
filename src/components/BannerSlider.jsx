@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const BannerSlider = () => {
+    const navigate = useNavigate()
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full items-center justify-between">
             <div data-aos="fade-up" className="pl-6 xl:pl-10 py-6">

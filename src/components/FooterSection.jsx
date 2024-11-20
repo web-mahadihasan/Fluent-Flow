@@ -3,13 +3,13 @@
 
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
-import textLogo from "../assets/logo-text.png"
+import textLogo from "../assets/logo-white.png"
 import logo from "../assets/logo-only.png"
 
 
 const FooterSection = () => {
   return (
-    <Footer className="bg-gray-400">
+    <Footer className="bg-black/80">
       <div className="container mx-auto px-4 xl:px-0">
         <div className="w-full">
           <div>
@@ -58,7 +58,7 @@ const FooterSection = () => {
           </div>
           
           <div className="w-full border-t border-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-            <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+            <Footer.Copyright href="#" by="Fluent Flow" year={2024} />
             <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
               <Footer.Icon href="#" icon={BsFacebook} />
               <Footer.Icon href="#" icon={BsInstagram} />

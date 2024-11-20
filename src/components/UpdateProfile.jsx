@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthProviderContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
 
@@ -28,6 +29,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="max-w-5xl mx-auto px-4 flex items-center justify-center min-h-[700px]">
+            <Helmet>
+                <title>Fluent Flow | Update Profile</title>
+            </Helmet>
             <div data-aos="flip-left" className="p-8 min-h-[500px] border-[#a38ffd] rounded-md shadow-md shadow-base-200 w-[450px] border">
             <img src={user?.photoURL} alt="" className="w-20 h-20 mx-auto ring-4 object-center ring-[#9b84fd] rounded-full bg-white"/>
                 <h3 className="text-center mt-8 text-xl text-black/70 font-semibold">Update your profile Information</h3>

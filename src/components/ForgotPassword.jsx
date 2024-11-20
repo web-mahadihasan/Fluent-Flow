@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const ForgotPassword = () => {
     const {forgotEmail, setForgotEmail, resetUserEmailPassword} = useContext(AuthProviderContext)
@@ -29,6 +30,9 @@ const ForgotPassword = () => {
     }
     return (
         <div data-aos="zoom-in-up" className="px-4 py-8 z-10">
+            <Helmet>
+                <title>Fluent Flow | Reset Password</title>
+            </Helmet>
             <div>
             <h3 className="text-center my-10 uppercase text-2xl font-bold text-black/65">Reset your passowrd</h3>
                 <form onSubmit={handleForgotPassword} className="space-y-5">

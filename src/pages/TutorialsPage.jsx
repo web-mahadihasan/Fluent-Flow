@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import Tutorials from "../components/Tutorials";
 import { Button } from "@material-tailwind/react";
 import SectionTitle from "../components/SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 const TutorialsPage = () => {
     const videos = useLoaderData()
@@ -9,6 +10,9 @@ const TutorialsPage = () => {
     console.log(videos)
     return (
         <div className="container mx-auto px-4 xl:px-0">
+            <Helmet>
+                <title>Fluent Flow | Tutorials</title>
+            </Helmet>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center my-8 p-6">
                 <div data-aos="fade-right">
                     <h3 className="text-3xl max-w-xl leading-relaxed font-bold">Our video Guides help you to learn <span className="text-[#a38ffd]">German alphabet</span></h3>

@@ -1,9 +1,11 @@
 import { Button } from "@material-tailwind/react";
-import bgShadow from "../assets/bgShadow.svg"
 import watch from "../assets/play.svg"
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthProviderContext } from "../providers/AuthProvider";
 
 const HomeAbout = () => {
+    const {user} = useContext(AuthProviderContext)
     return (
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 my-24 bg-white/90">
             <div data-aos="zoom-in-up" className="border bg-bgShadow bg-no-repeat bg-bottom shadow rounded-tl-[100px] rounded-br-[100px]">
@@ -33,7 +35,7 @@ const HomeAbout = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-6 mt-2">
-                    <Link to={"/auth/login"}><Button  variant="filled" className="bg-[#a38ffd] tracking-wider">Join us</Button></Link>
+                    <Link to={user? "/start-learning/" : "/auth/login"}><Button  variant="filled" className="bg-[#a38ffd] tracking-wider">{user? "Start Learning": "Join us"}</Button></Link>
                     <Link to={"/tutorials"} className="flex items-center gap-2 w-fit py-1 px-4  rounded-full cursor-pointer my-3 hover:shadow duration-300">
                         <img src={watch} alt="" />
                         <span className="text-lg font-medium">Watch Now</span>

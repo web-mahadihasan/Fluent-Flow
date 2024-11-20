@@ -2,6 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
     const navigate = useNavigate()
@@ -20,7 +21,9 @@ const MyProfile = () => {
     }, [])
     return (
         <div className="max-w-5xl mx-auto px-4 xl:px-0">
-
+            <Helmet>
+                <title>Fluent Flow | My Profile</title>
+            </Helmet>
           <div data-aos="fade-up" data-aos-duration="500" className="rounded-2xl border mt-8 shadow">
             <div className="flex items-center justify-center h-[200px] bg-gradient-to-r from-[#c4b8fb] to-[#9c87fd] border rounded-t-2xl">
                 <h1 data-aos="zoom-in-up" className="text-3xl font-semibold">{greeting} , {user?.displayName}</h1>

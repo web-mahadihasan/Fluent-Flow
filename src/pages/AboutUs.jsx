@@ -2,6 +2,7 @@ import { Button } from "@material-tailwind/react";
 import DisplayProject from "../components/DisplayProject";
 import SectionTitle from "../components/SectionTitle";
 import SkillsProgress from "../components/SkillsProgress";
+import { Helmet } from "react-helmet-async";
   
 
 const AboutUs = () => {
@@ -19,6 +20,9 @@ const AboutUs = () => {
     ]
   return (
     <div className="container mx-auto px-4">
+        <Helmet>
+            <title>Fluent Flow | About us</title>
+        </Helmet>
       <div data-aos="fade-up" className="bg-[#F5FCFF] grid gap-6 grid-cols-1 md:grid-cols-2 items-center justify-center p-4 lg:p-8 mt-6 mb-24 rounded-md">
         <div data-aos="fade-right">
           <p className="bg-[#a38ffd]/25 my-4 py-2 px-8 w-fit rounded-bl-[20px] rounded-tr-[20px]">

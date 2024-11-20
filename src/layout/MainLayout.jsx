@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AuthProviderContext } from "../providers/AuthProvider";
 import WelcomeMessage from "../components/WelcomeMessage";
+import { HelmetProvider } from "react-helmet-async";
 
 
 const MainLayout = () => {
@@ -21,21 +22,23 @@ const MainLayout = () => {
     return (
         <>
         <Toaster/>
-        <div>
-            {user && <WelcomeMessage/>}
-        </div>
-        <header className="sticky top-0 font-popins z-50">
-            <Header/>
-            {/* <Nav/> */}
-        </header>
+        <HelmetProvider>
+            <div>
+                {user && <WelcomeMessage/>}
+            </div>
+            <header className="sticky top-0 font-popins z-50">
+                <Header/>
+                {/* <Nav/> */}
+            </header>
 
-        <main className="min-h-[calc(100vh-418px)] font-popins bg-white">
-            <Outlet/>
-        </main>
+            <main className="min-h-[calc(100vh-418px)] font-popins bg-white">
+                <Outlet/>
+            </main>
 
-        <footer>
-            <FooterSection/>
-        </footer>
+            <footer>
+                <FooterSection/>
+            </footer>
+        </HelmetProvider>
         </>
     );
 };

@@ -5,12 +5,16 @@ import OurSuccess from "../components/OurSuccess";
 import UserReview from "../components/UserReview";
 import SectionTitle from "../components/SectionTitle";
 import ReadArticles from "../components/ReadArticles";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const {reviewData, articleData} = useLoaderData()
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Fluent Flow | Home</title>
+      </Helmet>
       <MainBanner/>
       {/* About us  */}
       <div className="container mx-auto px-4 xl:px-0">

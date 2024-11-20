@@ -11,7 +11,7 @@ module.exports = withMT({
   theme: {
     extend: {
       backgroundImage: {
-        authbg: "url('./assets/loginBg.png')",
+        authbg: "url('https://i.ibb.co.com/VHSw56f/loginBg.png')",
         bannerBlue: "url('https://i.ibb.co.com/Hpmpc94/bannerbg-blue.png')",
         bgShadow: "url('./assets/bgShadow.svg')",
         aboutBg: "url('./assets/bgAbout.svg')",

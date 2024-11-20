@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import VocabularyCard from "../components/VocabularyCard";
 import { Button } from "@material-tailwind/react";
+import { Helmet } from "react-helmet-async";
 
 const LessonDetails = () => {
     const allVocabulary = useLoaderData();
@@ -23,6 +24,9 @@ const LessonDetails = () => {
     }
     return (
         <div className="container mx-auto px-4 xl:px-0 mb-24">
+            <Helmet>
+                <title>Fluent Flow | Lesson {lessonId}</title>
+            </Helmet>
             <div data-aos="fade-up" className="h-[180px] rounded-md justify-center bg-gradient-to-r from-[#c4b8fb] to-[#c4b8fb] my-10 text-3xl font-bold flex items-center gap-2 pl-4">
                 <span><img src="https://i.ibb.co.com/Jq6m862/bookmark.gif" alt="" className="w-14"/></span>
                 <span>Start Lesson - {lessonId}</span>
@@ -62,6 +66,3 @@ const LessonDetails = () => {
 };
 
 export default LessonDetails;
-
-// const {word, pronunciation, meaning, part_of_speech, difficulty, lesson_no } = vocabulary || {}
-// word, meaning,  when to say , example

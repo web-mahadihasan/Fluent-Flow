@@ -7,6 +7,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
 import toast from "react-hot-toast";
 import { RiInformationOffLine } from "react-icons/ri";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
     const [seePassword, setSeePassword] = useState(false)
@@ -79,6 +80,9 @@ const Signup = () => {
       }
     return (
         <div data-aos="fade-left" className="px-4 py-8 z-10">
+            <Helmet>
+                <title>Fluent Flow | Sign up</title>
+            </Helmet>
             <h3 className="text-center my-10 uppercase text-2xl font-bold text-black/65">Create a new account</h3>
             {
                 showError.existEmail && <p className="text-red-600 flex items-center gap-1 my-4"><RiInformationOffLine size={24} /> {showError.existEmail}</p>

@@ -1,7 +1,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useContext } from "react";
 import { FiPower, FiUserPlus } from "react-icons/fi";
-import { IoExitOutline, IoSettingsOutline } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";

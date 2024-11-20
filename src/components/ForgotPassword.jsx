@@ -37,7 +37,7 @@ const ForgotPassword = () => {
                     label="Enter your email"
                     className="appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none shadow-lg bg-base-200 py-4" />
                 </div>
-                <Button type="submit" fullWidth className="text-sm font-semibold tracking-wider">Reset Password</Button>
+                <Button type="submit" fullWidth className="text-sm font-semibold tracking-wider bg-[#a38ffd]">Reset Password</Button>
                 </form>
             </div>
             <div className="divider">Or</div>

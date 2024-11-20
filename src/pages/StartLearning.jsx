@@ -55,6 +55,7 @@ const StartLearning = () => {
             <Link to={`/start-learning/${lesson.lesson_no}`} className="w-fit ">
                 <Button variant="filled" className="bg-[#a38ffd] flex items-center gap-2">Start Lesson <GoArrowRight size={18} /></Button>
             </Link>
+            <button></button>
           </div>
         ))}
       </div>

@@ -6,6 +6,7 @@ import { AuthProviderContext } from "../providers/AuthProvider";
 const MyProfile = () => {
     const navigate = useNavigate()
     const [greeting, setGreeting] = useState("")
+    const [savedLesson, setSaveLesson] = useState([])
 
     const { user} = useContext(AuthProviderContext)
 
@@ -41,6 +42,9 @@ const MyProfile = () => {
           {/* Dashborad  */}
           <div className="min-h-[50px] my-6 p-6 border">
             <h3 className="text-xl font-semibold text-black/70">Dashboard</h3>
+            {
+                savedLesson.length < 0 ? "" : <h3 className="text-red-400 text-2xl font-semibold my-8">You don't Save any lesson now 🥺</h3>
+            }
           </div>
 
         </div>

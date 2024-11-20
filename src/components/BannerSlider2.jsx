@@ -27,19 +27,4 @@ const BannerSlider2 = () => {
 
 export default BannerSlider2;
 
- {/* <div className="absolute">
-                    <div className="relative top-[200px]">
-                        <img src="https://i.ibb.co.com/98pD6sQ/slidep1.png" alt="" className="h-[270px] relative w-[185px] z-30 rounded-b-full"/>
-                        <img src="https://i.ibb.co.com/z4Lf9m9/ring1.png" alt="" className="absolute top-20 -z-0"/>
-                    </div>
-                </div>
-                <div className="absolute">
-                    <div className="relative">
-                        <img src="https://i.ibb.co.com/2n4ysmj/slidep2.png" alt="" className="h-[260px] w-[185px] z-30 relative"/>
-                        <img src="https://i.ibb.co.com/TgGgRB7/ring2.png" alt="" className="absolute top-16 z-0" />
-                    </div>
-                </div>
-                <div>
-                    <img src="https://i.ibb.co.com/cXyZ0kP/image-7.png" alt="" className="h-[260px] w-[185px]"/>
-                    <img src="https://i.ibb.co.com/SmxbtPM/ring3.png" alt="" />
-                </div> */}
+ 

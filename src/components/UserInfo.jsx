@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { AuthProviderContext } from "../providers/AuthProvider";
 import { HiLifebuoy } from "react-icons/hi2";
 import toast from "react-hot-toast";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const UserInfo = () =>  {
@@ -25,12 +26,13 @@ const UserInfo = () =>  {
     <div className="text-right">
       <Menu>
         <MenuButton className="inline-flex items-center ">
-          <div className="w-9 h-9 rounded-full">
+          <div className="rounded-full flex items-center gap-2">
             <img
               alt="Tailwind CSS Navbar component"
               src={user.photoURL}
-              className="w-full rounded-full ring-2 ring-offset-2 ring-black/70 h-full"
+              className="w-10 h-10 rounded-full ring-2 ring-offset-2 ring-[#a38ffd]"
             />
+            <IoIosArrowDown size={20} />
           </div>
         </MenuButton>
 

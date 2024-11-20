@@ -23,10 +23,10 @@ const LessonDetails = () => {
     }
     return (
         <div className="container mx-auto px-4 xl:px-0 mb-24">
-            <h4 data-aos="fade-up" className="my-10 text-2xl font-bold flex items-center gap-2 pl-4">
+            <div data-aos="fade-up" className="h-[180px] rounded-md justify-center bg-gradient-to-r from-[#c4b8fb] to-[#c4b8fb] my-10 text-3xl font-bold flex items-center gap-2 pl-4">
                 <span><img src="https://i.ibb.co.com/Jq6m862/bookmark.gif" alt="" className="w-14"/></span>
                 <span>Start Lesson - {lessonId}</span>
-            </h4>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {
                     vocabularies?.map(vocabulary => <VocabularyCard key={vocabulary.id} vocabulary={vocabulary} handleWhenToSay={handleWhenToSay} />)

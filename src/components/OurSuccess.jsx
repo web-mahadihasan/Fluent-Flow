@@ -15,7 +15,7 @@ const OurSuccess = () => {
       </div>
 
       {/* Our success card  */}
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-6 rounded-md mb-24 bg-[#a38ffd]/55">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 p-6 rounded-md mb-24 bg-[#a38ffd]/55">
         {/* Card one  */}
         <div data-aos="fade-right" className="border bg-white/90 rounded-md border-gray-200 shadow-md p-4 flex flex-col items-center">
             <div className="p-3 bg-[#a38ffd]/15 rounded-full w-fit">

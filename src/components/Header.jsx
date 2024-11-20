@@ -40,7 +40,7 @@ const Header = () => {
     <div className=" max-h-[768px] w-full flex items-center z-50 backdrop-blur-2xl bg-white/30">
       <Navbar className=" z-10 h-max max-w-full rounded-none px-0">
         <div className="flex items-center justify-between text-blue-gray-900 container mx-auto px-4 xl:px-0">
-          <Link className="mr-4 cursor-pointer py-1.5 font-bold text-3xl flex items-center" >
+          <Link to={"/"} className="mr-4 cursor-pointer py-1.5 font-bold text-3xl flex items-center" >
             <img src={logo} alt="" className="mr-3 lg:h-10 h-9" />
             <img src={textLogo} alt="" className="mr-3 lg:h-10 h-9"/>
           </Link>
